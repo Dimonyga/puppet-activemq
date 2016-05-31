@@ -2,7 +2,7 @@
 #
 # == Usage
 #
-# This class is not intended to be used directly.
+# This class is intended to be used directly.
 #
 class activemq::postgresql (
   $database_name        = 'jmx',
