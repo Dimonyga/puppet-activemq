@@ -20,7 +20,7 @@ class activemq::postgresql (
           db.host=localhost
           db.port=5432
           db.name=${database_name}
-          db.user=a${database_username}
+          db.user=${database_username}
           db.passwd=${database_password}
           db.pool.maxActive=10
           "
