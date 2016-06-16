@@ -14,6 +14,7 @@ class activemq::postgresql (
     user     => $database_username,
     password => $database_password,
     grant    => 'all',
+    require => Class['postgresql::server'],
   }
 
   $str = "## activemq database settings
@@ -27,6 +28,7 @@ class activemq::postgresql (
 
   file { "${real_config_dir}/activemq.properties":
     content => $str,
+    require   => Class['activemq::install'],
   }
 
 }
